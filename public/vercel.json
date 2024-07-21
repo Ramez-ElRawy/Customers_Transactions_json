@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["customersTransactions.json"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}
